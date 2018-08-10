@@ -45,6 +45,7 @@ VistaAdministrador.prototype = {
   },
 
   configuracionDeBotones: function(){
+
     var e = this.elementos;
     var contexto = this;
 
@@ -53,9 +54,19 @@ VistaAdministrador.prototype = {
       contexto.limpiarFormulario();
       contexto.controlador.agregarPregunta();
     });
-    // Completar la asociación de de eventos a los
-    // botones editarPregunta, borrarPregunta y borrarTodo
-   
+
+    e.editarPregunta.click(function() {
+
+    });
+
+    e.borrarPregunta.click(function() {
+
+    });
+
+    e.borrarTodo.click(function() {
+
+    });
+
   },
 
 

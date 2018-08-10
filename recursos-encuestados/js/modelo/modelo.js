@@ -3,7 +3,7 @@
  */
 var Modelo = function() {
   this.preguntas = [];
-  this.ultimoId = 0;
+  //this.ultimoId = 0; me parecio innecesario
 
   //inicializacion de eventos
   this.preguntaAgregada = new Evento(this);
@@ -12,6 +12,11 @@ var Modelo = function() {
 Modelo.prototype = {
   //se obtiene el id más grande asignado a una pregunta
   obtenerUltimoId: function() {
+    if (this.preguntas == []){
+      return 0;
+    }
+    else
+      return this.preguntas[this.preguntas.length - 1].id;
   },
 
   //se agrega una pregunta dado un nombre y sus respuestas
@@ -26,5 +31,6 @@ Modelo.prototype = {
 
   //se guardan las preguntas
   guardar: function(){
+    Storage.almacenarObjeto(this.preguntas);
   },
 };

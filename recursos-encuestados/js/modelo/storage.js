@@ -12,7 +12,7 @@ Storage.prototype = {
     localStorage.setItem('preguntas', JSON.stringify(myJSON));
   },
 
-  seObtieneObjeto: function() {
+  obtenerObjeto: function() {
     var retrievedObject = localStorage.getItem('testObject');
     return JSON.parse(retrievedObject);
   },
